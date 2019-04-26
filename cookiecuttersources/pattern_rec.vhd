@@ -133,7 +133,7 @@ begin
                         end if;
                     when s4 =>
                         if (ready = '1') then
-                            ram(index) <= to_integer(unsigned(savedres));
+                            ram(index) <= to_integer(unsigned(res));
                             index := index+1;
                             if(index /= 21) 
                                 then req <= std_logic_vector(to_unsigned(index, req'length)); 
